@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://a01075696193-oss.github.io/haru-calc/sitemap.xml
