@@ -1,0 +1,63 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Collect site files
+        run: |
+          mkdir -p _site
+          cp -a \
+            index.html \
+            404.html \
+            about.html \
+            contact.html \
+            faq.html \
+            privacy.html \
+            guide-age.html \
+            guide-chars.html \
+            guide-dday.html \
+            guide-pyeong.html \
+            style.css \
+            app.js \
+            calc.js \
+            sitemap.xml \
+            robots.txt \
+            og.png \
+            favicon.ico \
+            favicon.svg \
+            _site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,9 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:#f5f7fb;color:#222}
+header{background:#3b5bdb;color:#fff;padding:14px;text-align:center}header h1{margin:0 0 8px;font-size:1.4em}nav a{color:#fff;margin:0 8px;text-decoration:none;font-size:.95em}
+main{max-width:720px;margin:auto;padding:12px}section{background:#fff;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 1px 4px #0001}
+h2{font-size:1.1em;margin-top:0}textarea,input{width:100%;padding:10px;font-size:16px;border:1px solid #ccd;border-radius:8px;margin:4px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.grid div{background:#eef2ff;border-radius:8px;padding:8px;font-size:.85em;text-align:center}.grid b{display:block;font-size:1.3em}
+.out{font-size:1.15em;font-weight:600;color:#3b5bdb}.note{color:#666;font-size:.85em}.ad{border:2px dashed #bbb;color:#999;text-align:center;padding:20px;border-radius:8px}
+footer{text-align:center;padding:20px;font-size:.85em;color:#666}
+.content{background:#fff;border-radius:12px;padding:18px;line-height:1.75;margin:12px 0}.content h3{font-size:1.02em;margin-top:1.4em;color:#3b5bdb}
+.btn{display:inline-block;background:#3b5bdb;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}footer a{color:#3b5bdb}
